@@ -1,3 +1,5 @@
+package com.matthewjensen.project.modules;
+
 /**
 CSE 143, Winter 2010, Marty Stepp
 Homework 6 (Anagrams)
@@ -24,7 +26,7 @@ public class AnagramMain {
     
     // set to true to test runtime and # of letter inventories created
     private static final boolean TIMING = true;
-    private static final boolean DEBUG = false;
+    private static final boolean DEBUG = true;
     
     
     public static void main(String[] args) throws FileNotFoundException {

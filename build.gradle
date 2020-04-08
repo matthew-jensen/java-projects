@@ -1,0 +1,40 @@
+plugins {
+	id 'org.springframework.boot' version '2.2.6.RELEASE'
+	id 'io.spring.dependency-management' version '1.0.9.RELEASE'
+	id 'java'
+    id 'application'
+}
+
+group = 'com.matthewjensen'
+version = '0.0.1-SNAPSHOT'
+sourceCompatibility = '11'
+
+repositories {
+	mavenCentral()
+}
+
+dependencies {
+	//implementation 'org.springframework.boot:spring-boot-starter-jdbc'
+	implementation 'org.springframework.boot:spring-boot-starter-web'
+    implementation 'org.junit.jupiter:junit-jupiter-api:5.5.1'
+	//runtimeOnly 'org.postgresql:postgresql'
+	implementation('org.springframework.boot:spring-boot-starter-test') {
+		exclude group: 'org.junit.vintage', module: 'junit-vintage-engine'
+	}
+    testCompile 'junit:junit:4.12'
+    compile 'junit:junit:4.12'
+    implementation 'org.springframework.boot:spring-boot-devtools:2.2.6.RELEASE'
+
+sourceSets {
+    main {
+        java {
+            srcDir 'src'
+        }
+    }
+}
+}
+mainClassName = 'com.matthewjensen.project.ProjectApplication' 
+
+test {
+	useJUnitPlatform()
+}
